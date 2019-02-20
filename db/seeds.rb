@@ -15,13 +15,11 @@
 
 # ])
 puts "starting seed..."
-# Restaurant.destroy_all
+Restaurant.destroy_all
 
 categories = %w(chinese italian japanese french belgian)
 5.times do
   Restaurant.create(name: Faker::Restaurant.name, address: Faker::Address.full_address, category: categories.sample)
 end
-
-# return retaurants
 
 puts "ending seed"
